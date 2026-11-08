@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>HASH EDU</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #090909;
+  color: #f7f2e8;
+  font-family: Arial, sans-serif;
+  padding-bottom: 90px;
+}
+
+header {
+  padding: 25px 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #d6b45b;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.tagline {
+  color: #a69a7d;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.profile {
+  border: 1px solid #b99543;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #e5c36d;
+  font-size: 18px;
+}
+
+main {
+  padding: 10px 20px;
+}
+
+.welcome {
+  margin: 20px 0 25px;
+}
+
+.welcome p {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.gold {
+  color: #dfbd66;
+}
+
+.section-title {
+  font-size: 17px;
+  margin: 28px 0 15px;
+}
+
+.exam-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.exam {
+  background: linear-gradient(145deg,#211b10,#111);
+  border: 1px solid #65512a;
+  border-radius: 15px;
+  padding: 18px 14px;
+  min-height: 112px;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.exam strong {
+  display: block;
+  color: #e5c36d;
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.exam small {
+  color: #b4aa96;
+  font-size: 11px;
+}
+
+.ai-card {
+  margin-top: 22px;
+  background: linear-gradient(130deg,#342710,#17130c);
+  border: 1px solid #c6a34e;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.ai-card h2 {
+  color: #edce7b;
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.ai-card p {
+  color: #c4bca9;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ai-button {
+  margin-top: 16px;
+  background: #d6b45b;
+  color: #17120a;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 18px;
+  font-weight: bold;
+}
+
+.learning {
+  background: #171717;
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 17px;
+}
+
+.learning p {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  border-top: 1px solid #4c3c1e;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 4px;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.bottom-nav button.active {
+  color: #e2bd62;
+}
+
+#notice {
+  display: none;
+  position: fixed;
+  bottom: 85px;
+  left: 10%;
+  width: 80%;
+  background: #292213;
+  border: 1px solid #d6b45b;
+  color: #f5dda0;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+</style>
+
+
+  </head>
+
+<body>
+  <div class="creator">
+    <p>FOUNDER & CREATOR</p>
+    <h2>Created  by</h2>
+    <h1>HARSHAD and SUNIL</h1>
+    <span class="creator-line"></span>
+  </div>
+
+<header>
+  <div>
+    <div class="logo">HASH EDU</div>
+    <div class="tagline">LEARN • PRACTISE • ACHIEVE</div>
+  </div>
+  <button class="profile" onclick="showNotice('Profile coming in the next version')">
+    H
+  </button>
+</header>
+
+<main>
+
+  <section class="welcome">
+    <p>WELCOME TO YOUR LEARNING SPACE</p>
+    <h1>Study smarter.<br>
+    <span class="gold">Achieve more.</span></h1>
+  </section>
+
+  <h2 class="section-title">Choose your examination</h2>
+
+  <section class="exam-grid">
+    <button class="exam" onclick="showNotice('NEET preparation selected')">
+      <strong>NEET</strong>
+      <small>Physics • Chemistry • Biology</small>
+    </button>
+
+    <button class="exam" onclick="showNotice('JEE preparation selected')">
+      <strong>JEE</strong>
+      <small>Physics • Chemistry • Maths</small>
+    </button>
+
+    <button class="exam" onclick="showNotice('KCET preparation selected')">
+      <strong>KCET</strong>
+      <small>PCMB preparation</small>
+    </button>
+
+    <button class="exam" onclick="showNotice('Board preparation selected')">
+      <strong>BOARD</strong>
+      <small>Class 11 • Class 12</small>
+    </button>
+  </section>
+
+  <section class="ai-card">
+    <h2>✦ HASH AI TUTOR</h2>
+    <p>
+      Your personal study assistant.
+      Ask questions, understand concepts
+      and practise step by step.
+    </p>
+    <button class="ai-button"
+      onclick="showNotice('HASH AI will be connected in a future version')">
+      Explore AI Tutor →
+    </button>
+  </section>
+
+  <h2 class="section-title">Continue learning</h2>
+
+  <section class="learning">
+    <span class="gold">YOUR STUDY SPACE</span>
+    <h3 style="margin-top:10px">Start your first lesson</h3>
+    <p>Choose an examination to begin your preparation.</p>
+  </section>
+
+  <h2 class="section-title">Daily practice</h2>
+
+  <section class="learning">
+    <h3>Daily Question Challenge</h3>
+    <p>Build your knowledge one question at a time.</p>
+    <button class="ai-button"
+      onclick="showNotice('Daily quiz feature coming soon')">
+      Start practice →
+    </button>
+  </section>
+
+</main>
+  <div class="creator">
+  <span class="creator-line"></span>
+  <p>CRAFTED WITH VISION</p>
+  <h2>Created by</h2>
+  <h1>HARSHAD NANDIWALE</h1>
+  <span class="creator-line"></span>
+  </div>
+
+<nav class="bottom-nav">
+  <button class="active" onclick="showNotice('You are on Home')">⌂<br>Home</button>
+  <button onclick="showNotice('Question bank coming soon')">▤<br>Learn</button>
+  <button onclick="showNotice('HASH AI coming soon')">✦<br>AI Tutor</button>
+  <button onclick="showNotice('Mock tests coming soon')">▣<br>Tests</button>
+  <button onclick="showNotice('Your profile is coming soon')">♙<br>Profile</button>
+</nav>
+
+<div id="notice"></div>
+
+<script>
+let noticeTimer;
+
+function showNotice(message) {
+  const notice = document.getElementById("notice");
+  notice.textContent = message;
+  notice.style.display = "block";
+
+  clearTimeout(noticeTimer);
+  noticeTimer = setTimeout(() => {
+    notice.style.display = "none";
+  }, 2200);
+}
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js")
+    .then(() => console.log("HASH EDU ready"))
+    .catch(error => console.log(error));
+}
+</script>
+</body>
+</html>
